@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../scss/edit/style.css">
+    <title>Dashboard</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <a href="dashboard.html" class="heading">
+                    <i class="fas fa-code"></i>
+                    DevConnector
+                </a>
+                <ul>
+                    <li><a href="./developers.html">Developers</a></li>
+                    <li><a href="./post.html">Post</a></li>
+                    <p>|</p>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-user"></i>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-sign-out-alt"></i>
+                            Logout
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="form my-5">
+        <div class="container">
+            <div class="head">
+                <h1>Create Your profile</h1>
+                <h3>
+                    <i class="fas fa-user"></i>
+                    Let's get some information to make your profile stand out
+                </h3>
+            </div>
+            <div class="main">
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>* Select Profile Status</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+                <p class="text-muted">
+                    Select your profile status
+                </p>
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Company">
+                    <p class="text-muted">
+                        Fill what your company is
+                    </p>
+                </div>
+                <div class="mb-3">
+                    <input type="url" class="form-control" id="exampleFormControlInput1" placeholder="www.example.com">
+                    <p class="text-muted">
+                        Your website
+                    </p>
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Location">
+                    <p class="text-muted">
+                        Location
+                    </p>
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="*Skills">
+                    <p class="text-muted">
+                        Skills
+                    </p>
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Your Github Username">
+                    <p class="text-muted">
+                        Github Username
+                    </p>
+                </div>
+                <div class="mb-3">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="A short bio of yourself"></textarea>
+                </div>
+                <div class="mb-3 d-flex align-items-center icons">
+                    <i class="fab fa-twitter"></i>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Your Twitter Username">
+                </div>
+                <div class="mb-3 d-flex align-items-center icons">
+                    <i class="fab fa-facebook"></i>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Your Facebook Username">
+                </div>
+                <div class="mb-3 d-flex align-items-center icons">
+                    <i class="fab fa-youtube"></i>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Your Youtube Username">
+                </div>
+                <div class="mb-3 d-flex align-items-center icons">
+                    <i class="fab fa-linkedin"></i>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Your Linkein Username">
+                </div>
+                <div class="mb-3 d-flex align-items-center icons">
+                    <i class="fab fa-instagram"></i>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Your Instagram Username">
+                </div>
+                <button class="btn btn-success">Submit</button>
+                <button class="btn btn-light">Cancel</button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

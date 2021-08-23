@@ -1,0 +1,112 @@
+@use "sass:color";
+
+@mixin set-back($url) {
+    background: {
+        image: url($url);
+        position: center;
+        size: cover;
+        repeat: no-repeat;
+    };
+}
+
+@mixin flex-center($direction:false) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    @if $direction {
+        flex-direction: column;
+    }
+}
+
+// Main style
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+header {
+    nav {
+        background-color: rgba($color: #000000, $alpha: 0.85);
+        padding: 20px 0;
+        border-bottom: 5px solid teal;
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            a {
+                color: white;
+                text-decoration: none;
+                font-size: 2rem;
+            }
+            ul {
+                list-style: none;
+                display: flex;
+                align-items: center;
+                @for $i from 1 to 6 {
+                    li:nth-child(#{$i}) {
+                        margin-left: 20px;
+                        a {
+                            color: white;
+                            text-decoration: none;
+                            font-size: 1.3rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.form {
+    padding: 20px 0;
+    font-family: Montserrat,sans-serif;
+    .container {
+        width: 60%;
+        .head {
+            margin: 40px 0;
+            h1 {
+                color: teal;
+            }
+            h3 {
+                font-size: 18px;
+            }
+        }
+        .main {
+            .icons {
+                display: flex;
+                justify-content: space-between;
+                i {
+                    font-size: 1.5rem;
+                }
+                input {
+                    width: 95%;
+                }
+            }
+        }
+    }
+}
+
+// Responsive Breakpoints
+
+@media screen and (max-width:768px) {
+    
+}
+
+// Phone Breakpoint
+@media screen and (max-width:576px) {
+    nav {
+        .container {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+    }
+    .form {
+        padding: 20px 0;
+        .container {
+            width: 90%;
+        }
+    }
+}

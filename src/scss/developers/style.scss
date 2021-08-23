@@ -1,0 +1,162 @@
+@mixin flex-center($direction:false) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    @if $direction {
+        flex-direction: column;
+    }
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+header {
+    nav {
+        background-color: rgba($color: #000000, $alpha: 0.85);
+        padding: 20px 0;
+        border-bottom: 5px solid teal;
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            a {
+                color: white;
+                text-decoration: none;
+                font-size: 2rem;
+            }
+            ul {
+                list-style: none;
+                display: flex;
+                align-items: center;
+                @for $i from 1 to 4 {
+                    li:nth-child(#{$i}) {
+                        margin-left: 20px;
+                        a {
+                            color: white;
+                            text-decoration: none;
+                            font-size: 1.3rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.developers {
+    font-family: Montserrat,sans-serif;
+    padding: 30px 0;
+    .container {
+        width: 60%;
+        h1 {
+            color: teal;
+        }
+        .mail {
+            .person-1 {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: rgb(235, 235, 235);
+                padding: 30px 50px;
+                border: 1px solid rgba(179, 179, 179, 0.678);
+                .bio {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    width: 70%;
+                    img {
+                        border-radius: 50% !important;
+                    }
+                    .bio-link {
+                        .name {
+                            font-size: 2rem;
+                            font-weight: 600;
+                        }
+                        .btn {
+                            background-color: teal !important;
+                            color: white;
+                        }
+                    }
+                }
+                .skills {
+                    color: teal;
+                }
+            }
+            .person-2 {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: rgb(235, 235, 235);
+                padding: 30px 50px;
+                border: 1px solid rgba(179, 179, 179, 0.678);
+                .bio {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    width: 70%;
+                    img {
+                        border-radius: 50% !important;
+                    }
+                    .bio-link {
+                        .name {
+                            font-size: 2rem;
+                            font-weight: 600;
+                        }
+                        .btn {
+                            background-color: teal !important;
+                            color: white;
+                        }
+                    }
+                }
+                .skills {
+                    color: teal;
+                }
+            }
+        }
+    }
+}
+
+// Responsive Breakpoints
+
+@media screen and (max-width:768px) {
+    
+}
+
+// Phone Breakpoint
+@media screen and (max-width:576px) {
+    header {
+        nav {
+            .container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+        }
+    }
+    .developers {
+        width: 100%;
+        .container {
+            width: 90%;
+            .mail {
+                .person-1 {
+                    flex-direction: column;
+                    text-align: center;
+                    .bio {
+                        flex-direction: column;
+                    }
+                }
+                .person-2 {
+                    flex-direction: column;
+                    text-align: center;
+                    .bio {
+                        flex-direction: column;
+                    }
+                }
+            }
+        }
+    }
+}

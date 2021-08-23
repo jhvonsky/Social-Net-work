@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../scss/comment/style.css">
+    <title>Reply Comment</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <a href="dashboard.html" class="heading">
+                    <i class="fas fa-code"></i>
+                    DevConnector
+                </a>
+                <ul>
+                    <li><a href="./developers.html">Developers</a></li>
+                    <li><a href="#">Post</a></li>
+                    <p>|</p>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-user"></i>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-sign-out-alt"></i>
+                            Logout
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="post">
+        <div class="container">
+            <a href="./post.html" class="my-3 btn" id="back">Back to Post</a>
+            <div class="head">
+                <div class="first">
+                    <div class="user">
+                        <img src="../img/face1.jpg" alt="Face 1 John" width="200" height="200">
+                        <p>John Doe</p>
+                    </div>
+                    <div class="msg mx-5">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid soluta obcaecati quod, quos iure accusamus, ad quasi autem, magni illo voluptatem et nulla doloremque ipsa maxime provident quas numquam cupiditate.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="main">
+                <button class="say">Say Something...</button>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="Create a post"></textarea>
+                <button class="btn-dark submit my-3">Submit</button>
+            </div>
+            <div class="comments">
+                <div class="first">
+                    <div class="user">
+                        <img src="../img/face1.jpg" alt="Face 1 John" width="200" height="200">
+                        <p>John Doe</p>
+                    </div>
+                    <div class="msg mx-5">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid soluta obcaecati quod, quos iure accusamus, ad quasi autem, magni illo voluptatem et nulla doloremque ipsa maxime provident quas numquam cupiditate.
+                        </p>
+                        <button class="btn btn-dark">
+                            <i class="fas fa-thumbs-up"></i>
+                            0
+                        </button>
+                        <button class="btn btn-dark">
+                            <i class="fas fa-thumbs-down"></i>
+                            0
+                        </button>
+                        <a href="#" class="comments btn btn-success">Comments</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,131 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+header nav {
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 20px 0;
+  border-bottom: 5px solid teal;
+}
+header nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav .container a {
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+}
+header nav .container ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+header nav .container ul li:nth-child(1) {
+  margin-left: 20px;
+}
+header nav .container ul li:nth-child(1) a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+header nav .container ul li:nth-child(2) {
+  margin-left: 20px;
+}
+header nav .container ul li:nth-child(2) a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+header nav .container ul li:nth-child(3) {
+  margin-left: 20px;
+}
+header nav .container ul li:nth-child(3) a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+header nav .container ul li:nth-child(4) {
+  margin-left: 20px;
+}
+header nav .container ul li:nth-child(4) a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+header nav .container ul li:nth-child(5) {
+  margin-left: 20px;
+}
+header nav .container ul li:nth-child(5) a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+
+.post {
+  padding: 50px 0;
+  margin: 30px 0;
+}
+.post .container {
+  width: 70%;
+}
+.post .container .head h1 {
+  color: teal;
+}
+.post .container .head p {
+  font-size: 1.2rem;
+}
+.post .container .main .say {
+  background-color: teal;
+  color: white;
+  width: 100%;
+  text-align: left;
+  border: none;
+  padding: 10px 5px;
+  margin: 10px 0;
+}
+.post .container .comments .first {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  background-color: #f1f1f1;
+  border: 1px solid #c8c8c8;
+  padding: 20px;
+}
+.post .container .comments .first .user {
+  text-align: center;
+}
+.post .container .comments .first .user img {
+  border-radius: 50%;
+}
+.post .container .comments .first .msg .btn:hover {
+  background-color: rgba(0, 0, 0, 0.746);
+  border: none;
+}
+.post .container .comments .first .msg .comments {
+  text-decoration: none;
+  background-color: teal;
+  color: white;
+}
+
+@media screen and (max-width: 576px) {
+  header nav .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .post .container {
+    width: 90%;
+  }
+  .post .container .comments .first {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

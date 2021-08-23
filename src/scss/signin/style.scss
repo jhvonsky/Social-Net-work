@@ -1,0 +1,89 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+header {
+    nav {
+        background-color: rgba($color: #000000, $alpha: 0.85);
+        padding: 20px 0;
+        border-bottom: 5px solid teal;
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            a {
+                color: white;
+                text-decoration: none;
+                font-size: 2rem;
+            }
+            ul {
+                list-style: none;
+                display: flex;
+                align-items: center;
+                @for $i from 1 to 4 {
+                    li:nth-child(#{$i}) {
+                        margin-left: 20px;
+                        a {
+                            color: white;
+                            text-decoration: none;
+                            font-size: 1.3rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .main {
+        padding: 50px 0;
+        font-family: Montserrat,sans-serif;
+        .container {
+            max-width: 50px 0;
+            width: 60%;
+            .heading-form {
+                font-size: 2.5rem;
+                color: teal;
+            }
+            form {
+                .submit-cta {
+                    input {
+                        width: 15%;
+                    }
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}
+
+// Responsive Breakpoints
+
+@media screen and (max-width:768px) {
+    
+}
+
+// Phone Breakpoint
+@media screen and (max-width:576px) {
+    header {
+        nav {
+            .container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+        }
+        .main {
+            .container {
+                form {
+                    .submit-cta {
+                        input {
+                            width: 50%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

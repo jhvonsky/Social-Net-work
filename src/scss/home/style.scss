@@ -1,0 +1,108 @@
+@use "sass:color";
+
+@mixin set-back($url) {
+    background: {
+        image: url($url);
+        position: center;
+        size: cover;
+        repeat: no-repeat;
+    };
+}
+
+@mixin flex-center($direction:false) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    @if $direction {
+        flex-direction: column;
+    }
+}
+
+// Main style
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    @include set-back(("../../img/code.jpg"));
+}
+
+header {
+
+    nav {
+        background-color: rgba($color: #000000, $alpha: 0.85);
+        padding: 20px 0;
+        border-bottom: 5px solid teal;
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            a {
+                color: white;
+                text-decoration: none;
+                font-size: 2rem;
+            }
+            ul {
+                list-style: none;
+                display: flex;
+                align-items: center;
+                @for $i from 1 to 4 {
+                    li:nth-child(#{$i}) {
+                        margin-left: 20px;
+                        a {
+                            color: white;
+                            text-decoration: none;
+                            font-size: 1.3rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .main {
+        width: 100%;
+        height: 80vh;
+        font-family: Montserrat,sans-serif;
+        .container {
+            @include flex-center(true);
+            height: 100%;
+            color: white;
+            h1 {
+                font-size: 4rem;
+                font-weight: 500;
+            }
+            p {
+                font-size: 1.5rem;
+                font-weight: 100;
+            }
+            .cta {
+                .btn-primary {
+                    background-color: teal !important;
+                    border: none;
+                }
+            }
+        }
+    }
+}
+
+// Responsive Breakpoints
+
+@media screen and (max-width:768px) {
+    
+}
+
+// Phone Breakpoint
+@media screen and (max-width:576px) {
+    nav {
+        .container {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+    }
+    .main {
+        .container {
+            text-align: center;
+        }
+    }
+}

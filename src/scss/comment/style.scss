@@ -1,0 +1,150 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+header {
+    nav {
+        background-color: rgba($color: #000000, $alpha: 0.85);
+        padding: 20px 0;
+        border-bottom: 5px solid teal;
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            a {
+                color: white;
+                text-decoration: none;
+                font-size: 2rem;
+            }
+            ul {
+                list-style: none;
+                display: flex;
+                align-items: center;
+                @for $i from 1 to 6 {
+                    li:nth-child(#{$i}) {
+                        margin-left: 20px;
+                        a {
+                            color: white;
+                            text-decoration: none;
+                            font-size: 1.3rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.post {
+    padding: 50px 0;
+    margin: 30px 0;
+    .container {
+        width: 70%;
+        #back {
+            text-decoration: none;
+            background-color: rgb(209, 209, 209);
+            color: black;
+        }
+        .head {
+                .first {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: 1px solid black;
+                    background-color: rgb(241, 241, 241);
+                    border: 1px solid rgb(200, 200, 200);
+                    padding: 20px;
+                    .user {
+                        text-align: center;
+                        img {
+                            border-radius: 50%;
+                        }
+                    }
+                    .msg {
+                        .btn:hover {
+                            background-color: rgba(0, 0, 0, 0.746);
+                            border: none;
+                        }
+                        .comments {
+                            text-decoration: none;
+                            background-color: teal;
+                            color: white;
+                        }
+                    }
+                }
+        }
+        .main {
+            .say {
+                background-color: teal;
+                color: white;
+                width: 100%;
+                text-align: left;
+                border: none;
+                padding: 10px 5px;
+                margin: 10px 0;
+            }
+        }
+        .comments {
+            .first {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 1px solid black;
+                background-color: rgb(241, 241, 241);
+                border: 1px solid rgb(200, 200, 200);
+                padding: 20px;
+                .user {
+                    text-align: center;
+                    img {
+                        border-radius: 50%;
+                    }
+                }
+                .msg {
+                    .btn:hover {
+                        background-color: rgba(0, 0, 0, 0.746);
+                        border: none;
+                    }
+                    .comments {
+                        text-decoration: none;
+                        background-color: teal;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:576px) {
+    nav {
+        .container {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+    }
+    .post {
+        .container {
+            width: 90%;
+            .head {
+                .first {
+                    flex-direction: column;
+                    text-align: center;
+                }
+            }
+            .main {
+                .say {
+                    text-align: center;
+                }
+            }
+            .comments {
+                .first {
+                    flex-direction: column;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

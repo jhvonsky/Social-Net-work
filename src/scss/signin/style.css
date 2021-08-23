@@ -1,0 +1,82 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+header nav {
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 20px 0;
+  border-bottom: 5px solid teal;
+}
+header nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav .container a {
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+}
+header nav .container ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+header nav .container ul li:nth-child(1) {
+  margin-left: 20px;
+}
+header nav .container ul li:nth-child(1) a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+header nav .container ul li:nth-child(2) {
+  margin-left: 20px;
+}
+header nav .container ul li:nth-child(2) a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+header nav .container ul li:nth-child(3) {
+  margin-left: 20px;
+}
+header nav .container ul li:nth-child(3) a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+header .main {
+  padding: 50px 0;
+  font-family: Montserrat, sans-serif;
+}
+header .main .container {
+  max-width: 50px 0;
+  width: 60%;
+}
+header .main .container .heading-form {
+  font-size: 2.5rem;
+  color: teal;
+}
+header .main .container form .submit-cta {
+  display: flex;
+  flex-direction: column;
+}
+header .main .container form .submit-cta input {
+  width: 15%;
+}
+
+@media screen and (max-width: 576px) {
+  header nav .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  header .main .container form .submit-cta input {
+    width: 50%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

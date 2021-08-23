@@ -1,0 +1,179 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+header nav {
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 20px 0;
+  border-bottom: 5px solid teal;
+}
+header nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav .container a {
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+}
+header nav .container ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+header nav .container ul li:nth-child(1) {
+  margin-left: 20px;
+}
+header nav .container ul li:nth-child(1) a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+header nav .container ul li:nth-child(2) {
+  margin-left: 20px;
+}
+header nav .container ul li:nth-child(2) a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+header nav .container ul li:nth-child(3) {
+  margin-left: 20px;
+}
+header nav .container ul li:nth-child(3) a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+
+.about {
+  margin: auto;
+  padding: 50px 0;
+  font-family: Montserrat, sans-serif;
+}
+.about .container {
+  display: grid;
+  grid-template-areas: "link _ _ _" "head head head head" "head head head head" "head head head head" "bio bio bio bio" "bio bio bio bio" "expe expe ed ed" "repo repo repo repo" "repo repo repo repo";
+  gap: 20px;
+}
+.about .container .head {
+  grid-area: head;
+  padding: 40px 0;
+  background-color: teal;
+  text-align: center;
+  color: white;
+}
+.about .container .head .main-image {
+  border-radius: 50%;
+}
+.about .container .head h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 30px 0;
+}
+.about .container .head h5 {
+  font-size: 12px;
+}
+.about .container .head a {
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.about .container .bio {
+  text-align: center;
+  background-color: #dddddd;
+  grid-area: bio;
+  padding: 40px 20px;
+  border: 1px solid #949494;
+}
+.about .container .bio h3 {
+  font-weight: bold;
+  color: teal;
+}
+.about .container .bio .skills-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about .container .bio .skills-wrap div {
+  margin-left: 10px;
+}
+.about .container .experience {
+  grid-area: expe;
+  padding: 40px 20px;
+  background-color: #fafafa;
+  border: 1px solid #949494;
+}
+.about .container .experience h3 {
+  font-weight: bold;
+  color: teal;
+}
+.about .container .education {
+  grid-area: ed;
+  padding: 40px 20px;
+  background-color: #fafafa;
+  border: 1px solid #949494;
+}
+.about .container .education h3 {
+  font-weight: bold;
+  color: teal;
+}
+.about .container .repos {
+  grid-area: repo;
+}
+.about .container .repos h3 {
+  color: teal;
+}
+.about .container .repos .badges {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 20px;
+  background-color: #fafafa;
+  border: 1px solid #949494;
+  margin-bottom: 10px;
+}
+.about .container .repos .badges .place p {
+  text-align: center;
+}
+.about .container .repos .badges .place p:first-child {
+  background-color: teal;
+}
+.about .container .repos .badges .place p:nth-child(2) {
+  background-color: black;
+  color: white;
+}
+.about .container .link {
+  text-decoration: none;
+  background-color: #fafafa;
+  border: 1px solid #949494;
+  padding: 10px;
+}
+
+@media screen and (max-width: 576px) {
+  nav .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about .container {
+    grid-template-areas: "link _ _ _" "head head head head" "head head head head" "head head head head" "bio bio bio bio" "bio bio bio bio" "expe expe expe expe" "ed ed ed ed" "repo repo repo repo" "repo repo repo repo";
+    width: 90%;
+  }
+  .about .container .bio,
+.about .container .experience,
+.about .container .repos,
+.about .container .education {
+    margin: auto;
+  }
+  .about .container .repos .badges {
+    text-align: center;
+    flex-direction: column;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
